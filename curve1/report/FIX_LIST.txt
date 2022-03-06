@@ -1,0 +1,26 @@
+
+1) Variables initialized 
+Calibrator::Calibrator(void) {
+	count_steps = 7;
+	sum_5dg = 0;
+	sum_4dg = 0;
+	sum_3dg = 0;
+	sum_2dg = 0;
+
+}
+
+2) Index has been set to 6 
+void Calibrator::clear(void) {
+    for(int8_t i = 0; i < 6; i++) {
+        Coefficients[i]         =   0;
+        l_coefficients_5deg[i]  =   0;
+    }
+}
+
+
+3) In void Calibrator::begin() 
+Example points are used
+        //Fit_Curve_5dg.set_Coord(i, MeasuredGravity[i], MeasuredPlato[i]);
+        Fit_Curve_5dg.Load_Example_CalibrationPoints();
+		
+		
